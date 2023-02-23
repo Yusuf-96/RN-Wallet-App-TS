@@ -28,7 +28,7 @@ const FavoriteData = [
 
 const HeaderComp = () => {
   return (
-    <View className="w-full mx-auto">
+    <View className="">
       <View className="flex flex-row items-center justify-between gap-4">
         <Ionicons name="ios-menu-outline" size={24} color="black" />
         <View className="flex items-center">

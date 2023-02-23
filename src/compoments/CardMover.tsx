@@ -1,12 +1,14 @@
-import { View, Text } from 'react-native';
+import { View, Text, Dimensions } from 'react-native';
 import React from 'react';
+
+const {width} = Dimensions.get('screen')
 
 const CardMover = () => {
   return (
-    <View className="py-4 px-4 w-1/2">
-      <View className="flex flex-row space-x-4 w-full ">
-        <View className="bg-rose-100 px-4 py-4 w-full">
-          <View className="">
+    <View className="py-2 mb-4" style={{ width: width * 0.86 }}>
+      <View className="flex-row space-x-4">
+        <View className="bg-rose-100 px-4 py-6 w-1/2 rounded-md">
+          <View className="w-full">
             <Text>Icon</Text>
             <View className="flex flex-row gap-2">
               <Text className="font-bold">BNB</Text>
@@ -18,8 +20,8 @@ const CardMover = () => {
             </View>
           </View>
         </View>
-        <View className="bg-emerald-100 py-4 px-4 w-full">
-          <View className="">
+        <View className="bg-emerald-100 py-6 px-4 w-1/2 rounded-md ">
+          <View className="w-full">
             <Text>Icon</Text>
             <View className="flex flex-row gap-2">
               <Text className="font-bold">BNB</Text>

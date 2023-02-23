@@ -1,10 +1,11 @@
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, SafeAreaView, Text, View } from 'react-native';
 import React from 'react';
 import HeaderComp from '../compoments/HeaderComp';
 import FavoriteComp from '../compoments/FavoriteComp';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { IFavorite } from '../interfaces/favorite';
 import CardMover from '../compoments/CardMover';
+import GainLoserCard from '../compoments/GainLoserCard';
 
 const FavoriteData = [
   {
@@ -29,14 +30,14 @@ const FavoriteData = [
     subtitle: 'Ethereum',
     amoount: '$2,532.84',
     percentage: '-1.52%',
-    icon: <FontAwesome5 name="ethereum" size={24} color="black" />,
+    icon: <FontAwesome5 name="ethereum" size={24} color="blue" />,
   },
 ];
 
 const HomeScreen = () => {
   return (
-    <View className="w-full">
-      <View className="px-4">
+    <SafeAreaView className="flex-1 relative w-full bg-[#fcfcfc]">
+      <View className="mx-4">
         <HeaderComp />
         <Text className="font-medium text-gray-700">Favorites</Text>
         <FlatList
@@ -52,15 +53,15 @@ const HomeScreen = () => {
             />
           )}
         />
-      </View>
-      <View className="px-4">
         <View className="flex flex-row justify-between items-center">
           <Text className="font-medium text-gray-700">Top Movers</Text>
           <Text className="font-bold text-emerald-600">See all</Text>
         </View>
+        <CardMover />
+        <Text>Gainers & Losers</Text>
+        <GainLoserCard />
       </View>
-      <CardMover />
-    </View>
+    </SafeAreaView>
   );
 };
 
