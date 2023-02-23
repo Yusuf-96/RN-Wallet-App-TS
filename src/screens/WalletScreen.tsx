@@ -7,7 +7,7 @@ const WalletScreen = () => {
   return (
     <SafeAreaView className="bg-[#fcfcfc] flex-1">
       <View className='mx-4'>
-        <Text className='font-bold text-lg'>Wallet</Text>
+        <Text className='font-bold text-lg mb-4'>Wallet</Text>
         <WalletCard />
         <GainLoserCard />
         <GainLoserCard />
